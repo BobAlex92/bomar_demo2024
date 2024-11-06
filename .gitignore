@@ -1,0 +1,9 @@
+# Ignore video and large media files
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Ignore node_modules or other dependencies if any
+node_modules/

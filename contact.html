@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bomar Inc.</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Container -->
+    <div class="header-container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="img/bomar-logo-nobg.png" alt="Bomar Inc. Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="application.html">Apply Now</a></li>
+                    <li class="social-link"><a href="https://www.instagram.com/bomarinc/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main Contact Container -->
+    <div class="contact-main-container">
+        <main class="contact-main">
+            <section class="contact-intro">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Please use the form below to reach out to us with any questions, feedback, or to schedule a consultation. Your privacy is our priority, and all information shared here is securely encrypted.</p>
+            </section>
+
+            <section class="contact-form-section">
+                <form id="contactForm" method="post" action="/submit" class="contact-form">
+                    
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+                  
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+                   
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label style="display: none;">Leave this field empty</label>
+                    <input type="text" name="honeypot" style="display: none;">
+
+                    <button type="submit" class="contact-button">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer (Same as other pages) -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-logo">
+            <img src="img/bomar-logo-nobg.png" alt="Bomar Inc. Logo">
+            <p>Bomar Inc. - Professional Landscaping & Site Development Since 2003.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Phone: (519)-846-8855</p>
+            <p>Email: admin@bomarinc.com</p>
+            <p>7452 Speers Road, Elora, Ontario, N0B 1S0</p>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/bomarinc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Add more icons as needed -->
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2024 Bomar Inc. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+      function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('mobile-active'); // Toggles the mobile menu
+
+        // Check if the menu is open and add or remove click listener for closing
+        if (navLinks.classList.contains('mobile-active')) {
+            // Close menu when clicking outside
+            document.addEventListener('click', closeMenuOnOutsideClick);
+        } else {
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    }
+
+    function closeMenuOnOutsideClick(event) {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+
+        // Check if the click target is outside the nav-links and not the hamburger
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+            navLinks.classList.remove('mobile-active');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    }
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevent default form submission
+
+    let formData = new FormData(this);
+
+    fetch("/submit", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Thank you! Your message has been sent.");
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error sending your message. Please try again later.");
+    });
+});
+</script>
+
+</body>
+</html>

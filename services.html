@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomar Inc. - Services</title>
+    <link rel="stylesheet" href="styles/index.css"> <!-- Nav, Footer, Hero styling -->
+    <link rel="stylesheet" href="styles/services.css"> <!-- Service-specific styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navigation (Same as Index Page) -->
+    <header>
+        <nav class="navbar">
+             <div class="logo">
+                <a href="index.html">
+                <img src="img/bomar-logo-nobg.png" alt="Bomar Inc. Logo">
+            </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="application.html">Apply Now</a></li>
+                <li class="social-link">
+                    <a href="https://www.instagram.com/bomarinc/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Quality Work, Built to Last</h1>
+            <p>Our services are tailored to meet the highest standards in landscaping, site development, and custom outdoor features. Bomar Inc. is committed to transforming spaces with precision and care.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-list">
+          <video autoplay muted loop class="services-video-bg">
+        <source src="img/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div> <!-- Overlay for dark effect -->
+        <div class="services-container">
+
+<div class="service-card">
+    <img src="img/commercial-landscaping.webp" alt="Commercial Landscaping" class="service-image">
+    <div class="service-content">
+        <div class="main-content">
+            <h3>Commercial Landscaping</h3>
+            <p>Expert solutions for parks, trails, sports fields, and more, enhancing outdoor spaces for public use.</p>
+            <button class="expand-btn" onclick="toggleContent(this)">View More</button>
+        </div>
+        <div class="expandable-content">
+            <p><u>Our commercial landscaping services</u> focus on transforming large public spaces to enhance sustainability and aesthetic appeal, ensuring each project aligns with the community's needs.</p>
+            <ul>
+                <li>Park and Trail Design</li>
+                <li>Sports Field Installation</li>
+                <li>Community Garden Development</li>
+                <li>Outdoor Recreation Spaces</li>
+                <li>Public Space Maintenance and Upgrades</li>
+                <li>Playground Construction and Safety Surfacing</li>
+                <li>Landscape Restoration and Erosion Control</li>
+                <li>Urban Green Spaces and Tree Planting</li>
+                <li>Retention Ponds and Drainage Solutions</li>
+                <li>Lighting and Irrigation System Installation</li>
+                <li>Seating Areas, Benches, and Picnic Zones</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+             <div class="service-card">
+    <img src="img/hardscape.webp" alt="Hardscape Services" class="service-image">
+    <div class="service-content">
+        <div class="main-content">
+            <h3>Hardscape Services</h3>
+            <p>Providing professional hardscape solutions for commercial projects, from award-winning bid work to contracted installations.</p>
+            <button class="expand-btn" onclick="toggleContent(this)">View More</button>
+        </div>
+        <div class="expandable-content">
+            <p>Our hardscape services are designed to meet the unique needs of commercial landscapes. We specialize in durable and high-quality installations, including walkways, patios, retaining walls, and structural stonework. Delivering reliable, long-lasting results that enhance any commercial property.</p>
+            <ul>
+                <li>Retaining Walls and Reinforced Structures</li>
+                <li>Armor Stone and Boulder Placement</li>
+                <li>Walkways and Pathways</li>
+                <li>Patio and Seating Area Construction</li>
+                <li>Staircase and Step Installation</li>
+                <li>Concrete Curbing and Edging</li>
+                <li>Driveway and Entryway Paving</li>
+                <li>Outdoor Fire Pits and Gathering Areas</li>
+                <li>Natural Stone and Paver Installations</li>
+                <li>Decorative Rock Gardens and Borders</li>
+                <li>Landscape Terracing and Slopes</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+            <div class="service-card">
+    <img src="img/site-development.webp" alt="Site Development" class="service-image">
+    <div class="service-content">
+        <div class="main-content">
+            <h3>Site Development</h3>
+            <p>Complete site solutions, from grading and hydroseeding to infrastructure installation, ensuring lasting quality.</p>
+            <button class="expand-btn" onclick="toggleContent(this)">View More</button>
+        </div>
+        <div class="expandable-content">
+            <p>Our company delivers expert site development, handling everything from large-scale grading and excavation to site prep and land clearing. With skilled crews and advanced equipment, we ensure your land is leveled, cleared, and ready to build—all efficiently and safely.</p>
+            <ul>
+                <li>Land Clearing and Grading</li>
+                <li>Excavation and Site Preparation</li>
+                <li>Drainage System Design and Installation</li>
+                <li>Erosion Control and Soil Stabilization</li>
+                <li>Hydroseeding and Sod Installation</li>
+                <li>Road and Pathway Base Preparation</li>
+                <li>Utility Trenching and Infrastructure Installation</li>
+                <li>Stormwater Management Solutions</li>
+                <li>Foundation and Concrete Pad Preparation</li>
+                <li>Retaining Wall Foundations</li>
+                <li>Land Restoration and Soil Remediation</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            
+            <!-- Additional service cards can be added here -->
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index Page) -->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-logo">
+            <img src="img/bomar-logo-nobg.png" alt="Bomar Inc. Logo">
+            <p>Bomar Inc. - Professional Landscaping & Site Development Since 2003.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Phone: (519)-846-8855</p>
+            <p>Email: admin@bomarinc.com</p>
+            <p>7452 Speers Road, Elora, Ontario, N0B 1S0</p>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/bomarinc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Add more icons as needed -->
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2023 Bomar Inc. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleContent(button) {
+    // Find the closest .service-content parent of the button
+    const serviceContent = button.closest('.service-content');
+    
+    // Select the main content and expandable content within the same service card
+    const mainContent = serviceContent.querySelector('.main-content');
+    const expandableContent = serviceContent.querySelector('.expandable-content');
+    
+    // Toggle visibility of main and expandable content
+    mainContent.classList.toggle('hidden');
+    expandableContent.classList.toggle('expanded');
+    
+    // Update button text
+    button.textContent = expandableContent.classList.contains('expanded') ? 'Show Less' : 'View More';
+}
+</script>
+<script>
+     function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('mobile-active'); // Toggles the mobile menu
+
+        // Check if the menu is open and add or remove click listener for closing
+        if (navLinks.classList.contains('mobile-active')) {
+            // Close menu when clicking outside
+            document.addEventListener('click', closeMenuOnOutsideClick);
+        } else {
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    }
+
+    function closeMenuOnOutsideClick(event) {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+
+        // Check if the click target is outside the nav-links and not the hamburger
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+            navLinks.classList.remove('mobile-active');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    }
+</script>
+
+</body>
+</html>
