@@ -544,10 +544,14 @@
     .navbar .logo img {
         height: 100px; /* Adjusts the logo size to fit well on mobile */
     }
-    .hamburger {
-        position: relative;
-        right: auto;
-        left: 20px; /* Adjusts position relative to logo */
+   .hamburger {
+        display: block; /* Show hamburger on mobile */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.8rem;
+        color: #ffffff;
+        cursor: pointer;
     }
 
     /* Mobile nav menu styling */
