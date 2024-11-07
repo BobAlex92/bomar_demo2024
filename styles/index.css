@@ -542,7 +542,7 @@
         margin-left: 0px; /* Adds a small margin for spacing from the edge */
     }
     .navbar .logo img {
-        height: 150px; /* Adjusts the logo size to fit well on mobile */
+        height: 100px; /* Adjusts the logo size to fit well on mobile */
     }
     .hamburger {
         position: relative;
