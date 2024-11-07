@@ -543,8 +543,12 @@
     .navbar .logo img {
         height: 100px; /* Adjusts the logo size to fit well on mobile */
     }
+<<<<<<< HEAD
 
     .hamburger {
+=======
+   .hamburger {
+>>>>>>> a9e8697efb80a430b97b497ad8db7cc7fa559f67
         display: block; /* Show hamburger on mobile */
         position: absolute;
         right: 20px;
