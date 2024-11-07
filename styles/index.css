@@ -534,20 +534,24 @@
     .nav-links {
         display: none; /* Hide nav-links by default on mobile */
     }
-
-      .navbar {
+     .navbar {
         justify-content: flex-start; /* Aligns the logo and hamburger to the left */
     }
     .navbar .logo {
-        margin-left: 0px; /* Adds a small margin for spacing from the edge */
+        margin-left: 10px; /* Adds a small margin for spacing from the edge */
     }
     .navbar .logo img {
-        height: 150px; /* Adjusts the logo size to fit well on mobile */
+        height: 100px; /* Adjusts the logo size to fit well on mobile */
     }
+
     .hamburger {
-        position: relative;
-        right: auto;
-        left: 20px; /* Adjusts position relative to logo */
+        display: block; /* Show hamburger on mobile */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.8rem;
+        color: #ffffff;
+        cursor: pointer;
     }
 
     /* Mobile nav menu styling */
