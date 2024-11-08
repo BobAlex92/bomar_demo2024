@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 main {
     padding-top: 20px; /* Adjust padding as needed to fit below the nav */
 }
@@ -92,47 +94,54 @@ main {
     gap: 10px; /* Space between items */
     padding: 10px;
 }
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Image styling */
 .gallery-item img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    border-radius: 8px;
+    display: block;
+}
+/* Container for the gallery item */
+/* Container for the gallery item */
+.gallery-item {
+    margin-bottom: 20px; /* Space between items */
+    width: 100%; /* Full-width for smaller screens */
+    max-width: 400px; /* Limit width to resemble Instagram post layout */
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Image Hover Effect */
-.gallery-item:hover img {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-.gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Image styling */
+.gallery-item img {
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    padding: 10px;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Fade-in effect */
+    border-radius: 8px;
+    display: block;
+}
+
+/* Description container styling */
+.description {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none; /* Aligns with Instagram’s bottom border only */
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Show overlay text on hover */
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
+/* Text inside the description container */
+.description p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Username styling to resemble Instagram */
+.description .username {
+    font-weight: bold;
+    color: #262626;
+    display: inline;
+    margin-right: 5px;
+    font-size: 0.95rem;
 }
 /* Lightbox Styles */
 .lightbox {
@@ -181,6 +190,7 @@ main {
 }
 
 @media (max-width: 768px) {
+
     .nav-links {
         display: none; /* Hide nav-links by default on mobile */
     }
@@ -188,8 +198,12 @@ main {
     .hamburger {
         display: block; /* Show hamburger on mobile */
     }
-.navbar {
+    .navbar {
     text-align: center;
-}
+    }
+    .description {
+        font-size: 0.85rem;
+    }
+
    
 }

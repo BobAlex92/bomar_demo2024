@@ -143,6 +143,7 @@
 .about-text {
     flex: 1;
     color: #333333; /* Dark charcoal gray text color */
+    text-align: center;
 }
 
 /* Headline and Intro */
@@ -226,7 +227,7 @@
 .services-section {
     padding: 80px 20px;
     background-color: #ffffff;
-    text-align: left;
+    text-align: center;
 }
 
 .services-container {
@@ -353,11 +354,13 @@
 }
 
 .project-card {
+    width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .project-card:hover {
@@ -366,10 +369,11 @@
 }
 
 .project-card img {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    margin-bottom: 50px;
 }
 
 .project-card:hover img {
@@ -583,4 +587,10 @@
         text-align: center;
         display: block;
     }
+    .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 }
