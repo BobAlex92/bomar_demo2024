@@ -5,7 +5,16 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+body{
+    background: url('../img/background-img2.png') center/cover no-repeat fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.portfolio-section, .services-section {
+    background-color: transparent;
+}
 /* Hero Section - Updated for Centering */
 .hero-section {
     position: relative;
@@ -126,7 +135,7 @@
 /* About Section */
 .about-section {
     padding: 80px 20px;
-    background-color: #e5e5e5; /* Muted stone gray background */
+    background-color: #111; /* Muted stone gray background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +157,7 @@
 
 /* Headline and Intro */
 .about-text h2 {
-    color: #2f4f4f;
+    color: #fff;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -156,7 +165,7 @@
 .about-intro {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #4a4a4a; /* Slate gray for paragraph text */
+    color: #fff; /* Slate gray for paragraph text */
     margin-bottom: 30px;
 }
 
@@ -177,7 +186,7 @@
 }
 
 .value-title {
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     font-weight: bold;
     color: #333333;
     margin-bottom: 20px;
@@ -226,7 +235,6 @@
 /* Services Section */
 .services-section {
     padding: 80px 20px;
-    background-color: #ffffff;
     text-align: center;
 }
 
@@ -237,14 +245,14 @@
 
 .services-section h2 {
     font-size: 2rem;
-    color: #2f4f4f;
+    color: #fff;
     margin-bottom: 10px;
 
 }
 
 .services-intro {
     font-size: 1.1rem;
-    color: #555555;
+    color: #fff;
     margin-bottom: 40px;
 }
 
@@ -260,7 +268,7 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 30px 20px;
-    width: 250px;
+    width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -278,7 +286,7 @@
 }
 
 .service-card h3 {
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     color: #333333;
     margin-bottom: 10px;
 }
@@ -325,7 +333,7 @@
 /* Portfolio Section */
 .portfolio-section {
     padding: 80px 20px;
-    background-color: #f0f0f0;
+    background-color: #111;
     text-align: center;
 }
 
@@ -336,13 +344,13 @@
 
 .portfolio-section h2 {
     font-size: 2rem;
-    color: #2f4f4f; /* Slate Gray for heading */
+    color: #fff; /* Slate Gray for heading */
     margin-bottom: 10px;
 }
 
 .portfolio-intro {
     font-size: 1.1rem;
-    color: #555555;
+    color: #fff;
     margin-bottom: 40px;
 }
 
@@ -387,13 +395,14 @@
     left: 0;
     width: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
+    background: none;
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border:1px solid #fff;
 }
 
 /* Gallery Button */

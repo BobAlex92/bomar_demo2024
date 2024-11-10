@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application - Bomar Inc.</title>
-    <link rel="stylesheet" href="styles/index.css"> <!-- General styles for menu, footer, etc. -->
-    <link rel="stylesheet" href="styles/application.css"> <!-- Application form specific styling -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/application.css">
 </head>
 <body>
 
-    <!-- Include the same header and navigation from other pages -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -25,11 +24,9 @@
         </nav>
     </header>
 
-    <!-- Application Form Section -->
     <section class="application-section">
         <h1>Job Application</h1>
-        <form id="applicationForm">
-            <!-- Display Current Date and Start Date Selection -->
+        <form id="applicationForm" action="scripts/php/apply.php">
             <div class="form-group">
                 <label>Today's Date:</label>
                 <span id="currentDate"></span>
@@ -37,41 +34,35 @@
                 <input type="date" id="startDate" name="startDate" required>
             </div>
 
-            <!-- First and Last Name -->
             <div class="form-group">
                 <label for="name">First and Last Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
 
-            <!-- Date of Birth -->
             <div class="form-group">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
+                <label for="dateOfBirth">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
             </div>
 
-            <!-- Expected Rate of Pay -->
             <div class="form-group">
                 <label for="rateOfPay">Expected Rate of Pay:</label>
                 <input type="text" id="rateOfPay" name="rateOfPay" required>
-                 <select id="payType" name="payType">
-            <option value="hourly">Per Hour</option>
-            <option value="yearly">Per Year</option>
-        </select>
+                <select id="payType" name="payType">
+                    <option value="hourly">Per Hour</option>
+                    <option value="yearly">Per Year</option>
+                </select>
             </div>
 
-            <!-- Phone Number -->
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
 
-            <!-- Past Experience in Landscaping/Construction -->
             <div class="form-group">
                 <label for="experience">Landscape/construction experience? If so, how many years?</label>
                 <input type="number" id="experience" name="experience" min="0" placeholder="Years of experience">
             </div>
 
-            <!-- Driver's License Class -->
             <div class="form-group">
                 <label for="license">Current Class of Driver's License:</label>
                 <select id="license" name="license">
@@ -81,26 +72,20 @@
                     <option value="G">G</option>
                     <option value="DZ">DZ</option>
                     <option value="AZ">AZ</option>
-                    <!-- Add other classes if applicable -->
                 </select>
             </div>
 
-            <!-- Equipment Operating Experience -->
             <div class="form-group" id="equipmentContainer">
                 <label>Equipment Operating Experience:</label>
                 <button type="button" onclick="addEquipmentField()">Add Equipment</button>
-                <!-- Container for dynamic equipment fields -->
             </div>
 
-            <!-- Submit Button -->
             <button type="submit">Submit Application</button>
         </form>
     </section>
 
-    <!-- Include the footer from other pages -->
     <footer class="site-footer">
         <div class="footer-container">
-            <!-- Footer content same as other pages -->
         </div>
         <p class="footer-copyright">&copy; 2023 Bomar Inc. All Rights Reserved.</p>
     </footer>

@@ -38,8 +38,10 @@
                 <p>We'd love to hear from you! Please use the form below to reach out to us with any questions, feedback, or to schedule a consultation. Your privacy is our priority, and all information shared here is securely encrypted.</p>
             </section>
 
+
+
             <section class="contact-form-section">
-                <form id="contactForm" method="post" action="/submit" class="contact-form">
+                <form id="contactForm" method="post" action="scripts/php/contact.php" class="contact-form">
                     
                     <input type="text" id="name" name="name" placeholder="Full Name" required>
 
@@ -134,20 +136,26 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     let formData = new FormData(this);
 
-    fetch("/submit", {
+    fetch("scripts/php/contact.php", {
         method: "POST",
         body: formData,
         headers: { 'Accept': 'application/json' }
     })
     .then(response => response.json())
-    .then(data => {
+.then(data => {
+    console.log("Response:", data); // Debug line
+    if (data.status === "success") {
         alert("Thank you! Your message has been sent.");
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("There was an error sending your message. Please try again later.");
-    });
+    } else {
+        alert(data.message); // Display error message returned by PHP
+    }
+})
+.catch(error => {
+    console.error("Error:", error);
+    alert("There was an error sending your message. Please try again later.");
 });
+
+
 </script>
 
 </body>
