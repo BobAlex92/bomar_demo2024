@@ -1,3 +1,9 @@
+body, .application-section {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+
 .navbar {
     background-color: #333333; /* Dark background for contrast */
     color: #ffffff;
@@ -7,17 +13,39 @@
     width: 100%;
     z-index: 1000;
 }
+.intro-message {
+    background-color: #f9f9f9; /* Matches the background color of .result-container */
+    border-left: 4px solid #F59527; /* Accent border color matches submit button */
+    padding: 20px;
+    margin: 20px 0 30px;
+    border-radius: 5px; /* Matches the border-radius of form inputs */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
+}
+
+.intro-message p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* Form Section Styling */
 .application-section {
-    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 40px;
     max-width: 800px;
     margin: auto;
-    background-color: #f5f5f5;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    animation: fadeIn 0.5s ease-in-out;
+
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .result-container {
     padding: 20px;
     background-color: #f9f9f9;
@@ -27,54 +55,77 @@
 }
 
 .application-section h1 {
+    font-size: 2rem;
+    color: #2F4F4F;
     text-align: center;
-    margin-bottom: 30px;
-    color: #2f4f4f;
-}
-
-.form-group {
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-group input,
-.form-group select,
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
+.intro-message {
+    background-color: #fafafa; /* Slightly lighter background */
+    border-left: 5px solid #F59527;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
     border-radius: 5px;
 }
 
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #F59527;
+    outline: none;
+}
 button[type="submit"] {
     background-color: #F59527;
     color: #fff;
+    padding: 12px 20px;
     font-weight: bold;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:hover {
+    background-color: #e6851f;
+    transform: translateY(-2px);
+}
+
+button[type="button"] {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #e6b800;
-}
-
-/* Equipment Field Styling */
-.equipment-item {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-button[type="button"] {
-    padding: 10px;
+button[type="button"]:hover {
     background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
 }
+
+

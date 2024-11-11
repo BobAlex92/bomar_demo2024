@@ -58,12 +58,12 @@ main {
     justify-content: center;
     gap: 20px;
     padding: 20px 0;
-    background-color: #ffffff;
+    background-color: #111;
 }
 
 .gallery-filter a {
     font-size: 1rem;
-    color: #333333;
+    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -71,7 +71,7 @@ main {
 }
 
 .gallery-filter a:hover {
-    background-color: #ffcc00;
+    background-color: #f79425;
     color: #ffffff;
 }
 
@@ -119,13 +119,12 @@ main {
 /* Description container styling */
 .description {
     padding: 10px 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #111;
     border-top: none; /* Aligns with Instagram’s bottom border only */
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     font-size: 0.9rem;
-    color: #333;
+    color: #E0E0E0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -138,7 +137,7 @@ main {
 /* Username styling to resemble Instagram */
 .description .username {
     font-weight: bold;
-    color: #262626;
+    color: #E0E0E0;
     display: inline;
     margin-right: 5px;
     font-size: 0.95rem;

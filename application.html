@@ -6,6 +6,9 @@
     <title>Application - Bomar Inc.</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/application.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -25,7 +28,11 @@
     </header>
 
     <section class="application-section">
-        <h1>Job Application</h1>
+        <h1>Apply Now</h1>
+        <div class="intro-message">
+    <p>Welcome! We’re excited that you’re interested in joining the team at Bomar Inc. Please take a moment to fill out the application form below with your information and experience. We carefully review each application, and you can expect to hear back from us within two weeks. Thank you for considering a career with us—we look forward to learning more about you!</p>
+</div>
+
         <form id="applicationForm" action="scripts/php/apply.php">
             <div class="form-group">
                 <label>Today's Date:</label>
@@ -85,10 +92,45 @@
     </section>
 
     <footer class="site-footer">
-        <div class="footer-container">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-logo">
+            <img src="img/bomar-logo-nobg.png" alt="Bomar Inc. Logo">
+            <p>Bomar Inc. - Professional Landscaping & Site Development Since 2003.</p>
         </div>
-        <p class="footer-copyright">&copy; 2023 Bomar Inc. All Rights Reserved.</p>
-    </footer>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="application.html">Apply Now</a></li>
+            </ul>
+
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Phone: (519)-846-8855</p>
+            <p>Email: admin@bomarinc.com</p>
+            <p>7452 Speers Road, Elora, Ontario, N0B 1S0</p>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/bomarinc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Add more icons as needed -->
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2024 Bomar Inc. All Rights Reserved.</p>
+</footer>
 
     <script src="scripts/application.js"></script>
 </body>

@@ -1,3 +1,8 @@
+body, .contact-main-container {
+    font-family: 'Poppins', Arial, sans-serif; /* Use a modern font */
+    color: #333;
+}
+
 /* Navbar Background for Visibility */
 .navbar {
     background-color: #333333; /* Dark background for contrast */
@@ -38,22 +43,29 @@
     
 }
 
-.contact-intro h1 {
-    font-size: 2.5rem;
-    color: #2f4f4f;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-intro p {
-    font-size: 1.2rem;
-    color: #555555;
-    text-align: center;
+.contact-intro {
+    background-color: #f9f9f9;
+    border-left: 5px solid #f79425;
+    padding: 20px;
+    margin: 20px auto 40px;
     max-width: 800px;
-    margin: 0 auto 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Form Styling */
+.contact-intro h1 {
+    font-size: 2rem;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+.contact-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Form Section */
 .contact-form-section {
     display: flex;
     justify-content: center;
@@ -64,41 +76,58 @@
     width: 100%;
     max-width: 600px;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.contact-form:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form label {
     display: block;
     font-size: 1rem;
-    color: #333333;
+    color: #333;
     margin-bottom: 8px;
 }
-
-.contact-form input, .contact-form textarea {
+/* Input and Textarea Styles */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #cccccc;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 20px;
     font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #F59527;
+    outline: none;
 }
 
-.contact-form button {
+.contact-form button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #F59527;
+    background-color: #f79425;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form button:hover {
-    background-color: #e6b800;
+.contact-form button[type="submit"]:hover {
+    background-color: #e6851f;
+    transform: translateY(-2px);
 }
 @media (max-width: 768px) {
     .nav-links {
